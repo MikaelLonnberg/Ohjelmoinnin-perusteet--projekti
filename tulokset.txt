@@ -9,3 +9,5 @@ mikke: 2
 mikke: 4
 mikke: 3
 mikke: 4
+janetsu: 3
+janetsu: 3

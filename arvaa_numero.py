@@ -10,7 +10,7 @@ def arvaa_numero():
     yritykset = 0
 
     # Annetaan pelaajalle ohjeet
-    print("Arvaa numero 1-10. Ohjelma kertoo arvauksien jälkeen oliko arvaus liian pieni vai liian suuri. Jos saat oikein, peli ilmoittaa onnittelusi ja tallentaa tuloksesi tiedostoon.")
+    print("Arvaa numero 1-10. Ohjelma kertoo arvauksien jälkeen oliko arvaus liian pieni vai liian suuri. Jos saat oikein, peli ilmoittaa voitostasi ja tallentaa tuloksesi tiedostoon.")
     arvaus = None
 
     # Suoritetaan peli, kunnes pelaaja arvaa oikean numeron
@@ -27,13 +27,13 @@ def arvaa_numero():
             print("Liian suuri")
         else:
             # Jos arvaus on oikein, tulostetaan onnitteluteksti ja arvausten määrä
-            print(f"Voitit. Sinulla meni {yritykset} yritystä.")
+            print(f"Voitit! Sinulla meni {yritykset} yritystä.")
             # Tallennetaan tulos tiedostoon talteen
             tallenna_tulos(nimimerkki, yritykset)
 
 # Funktio tallenna_tulos tallentaa pelaajan tuloksen tiedostoon
 def tallenna_tulos(nimimerkki, yritykset):
-    # Tiedosto avataan lisäämismoodissa ("a"), jotta vanhat tulokset säilyvät
+    # Tiedosto avataan tilassa ("a"), jotta vanhat tulokset säilyvät
     with open("tulokset.txt", "a") as tiedosto:
         # Tulos tallennetaan muodossa "nimimerkki: yritysten määrä"
         tiedosto.write(f"{nimimerkki}: {yritykset}\n")
@@ -42,7 +42,7 @@ def tallenna_tulos(nimimerkki, yritykset):
 def lue_tulokset():
     tulokset = []
     try:
-        # Tiedosto avataan lukumoodissa ("r")
+        # Tiedosto avataan tilassa ("r")
         with open("tulokset.txt", "r") as tiedosto:
             # Luetaan jokainen rivi tiedostosta
             for rivi in tiedosto:
@@ -84,7 +84,7 @@ def main():
             nayta_top_10_tulokset()
         elif valinta == "3":
             # Lopetaan peli ja kiitetään pelaajaa
-            print("Kiitos pelaamisesta! Hei hei!")
+            print("Kiitos pelaamisesta! Heippa!")
             break
         else:
             # Jos painat jotain muuta kuin 1, 2 tai 3 niin esitetään virheilmoitus
