@@ -11,3 +11,6 @@ mikke: 3
 mikke: 4
 janetsu: 3
 janetsu: 3
+mikke: 2
+mikke: 5
+mikke: 1
